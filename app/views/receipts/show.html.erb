@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>No:</strong>
+  <%= @receipt.no %>
+</p>
+
+<p>
+  <strong>Billing date:</strong>
+  <%= @receipt.billing_date %>
+</p>
+
+<p>
+  <strong>Addressee:</strong>
+  <%= @receipt.addressee %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @receipt.price %>
+</p>
+
+<p>
+  <strong>Proviso:</strong>
+  <%= @receipt.proviso %>
+</p>
+
+<p>
+  <strong>Issuer name:</strong>
+  <%= @receipt.issuer_name %>
+</p>
+
+<p>
+  <strong>Issuer address:</strong>
+  <%= @receipt.issuer_address %>
+</p>
+
+<%= link_to 'Edit', edit_receipt_path(@receipt) %> |
+<%= link_to 'Back', receipts_path %>
