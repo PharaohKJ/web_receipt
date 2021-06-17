@@ -17,7 +17,7 @@ class ReceiptsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create receipt" do
     assert_difference('Receipt.count') do
-      post receipts_url, params: { receipt: { addressee: @receipt.addressee, billing_date: @receipt.billing_date, issuer_address: @receipt.issuer_address, issuer_name: @receipt.issuer_name, no: @receipt.no, price: @receipt.price, proviso: @receipt.proviso } }
+      post receipts_url, params: { receipt: { customer_name: @receipt.customer_name, billing_date: @receipt.billing_date, issuer_address: @receipt.issuer_address, issuer_name: @receipt.issuer_name, no: @receipt.no, price: @receipt.price, proviso: @receipt.proviso } }
     end
 
     assert_redirected_to receipt_url(Receipt.last)
@@ -34,7 +34,7 @@ class ReceiptsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update receipt" do
-    patch receipt_url(@receipt), params: { receipt: { addressee: @receipt.addressee, billing_date: @receipt.billing_date, issuer_address: @receipt.issuer_address, issuer_name: @receipt.issuer_name, no: @receipt.no, price: @receipt.price, proviso: @receipt.proviso } }
+    patch receipt_url(@receipt), params: { receipt: { customer_name: @receipt.customer_name, billing_date: @receipt.billing_date, issuer_address: @receipt.issuer_address, issuer_name: @receipt.issuer_name, no: @receipt.no, price: @receipt.price, proviso: @receipt.proviso } }
     assert_redirected_to receipt_url(@receipt)
   end
 

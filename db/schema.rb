@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_16_054635) do
+ActiveRecord::Schema.define(version: 2021_06_17_013544) do
 
   create_table "receipts", force: :cascade do |t|
     t.string "no"
     t.date "billing_date"
-    t.string "addressee"
+    t.string "customer_name"
     t.integer "price"
     t.string "proviso"
     t.string "issuer_name"

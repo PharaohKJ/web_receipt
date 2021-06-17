@@ -14,7 +14,7 @@ class ReceiptsTest < ApplicationSystemTestCase
     visit receipts_url
     click_on "New Receipt"
 
-    fill_in "Addressee", with: @receipt.addressee
+    fill_in "customer_name", with: @receipt.customer_name
     fill_in "Billing date", with: @receipt.billing_date
     fill_in "Issuer address", with: @receipt.issuer_address
     fill_in "Issuer name", with: @receipt.issuer_name
@@ -31,7 +31,7 @@ class ReceiptsTest < ApplicationSystemTestCase
     visit receipts_url
     click_on "Edit", match: :first
 
-    fill_in "Addressee", with: @receipt.addressee
+    fill_in "customer_name", with: @receipt.customer_name
     fill_in "Billing date", with: @receipt.billing_date
     fill_in "Issuer address", with: @receipt.issuer_address
     fill_in "Issuer name", with: @receipt.issuer_name

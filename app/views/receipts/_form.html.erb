@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= form.label :billing_date %>
-    <%= form.date_select :billing_date %>
+    <%= form.date_select :billing_date ,use_month_numbers: true%>
   </div>
 
   <div class="field">
-    <%= form.label :addressee %>
-    <%= form.text_field :addressee %>
+    <%= form.label :customer_name %>
+    <%= form.text_field :customer_name %>
   </div>
 
   <div class="field">
@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :proviso %>
-    <%= form.text_field :proviso %>
+    <%= form.text_area :proviso %>
   </div>
 
   <div class="field">
@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= form.label :issuer_address %>
-    <%= form.text_field :issuer_address %>
+    <%= form.text_area :issuer_address %>
   </div>
 
   <div class="actions">

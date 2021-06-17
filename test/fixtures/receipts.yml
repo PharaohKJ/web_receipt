@@ -3,7 +3,7 @@
 one:
   'no': MyString
   billing_date: 2021-06-16
-  addressee: MyString
+  customer_name: MyString
   price: 1
   proviso: MyString
   issuer_name: MyString
@@ -12,7 +12,7 @@ one:
 two:
   'no': MyString
   billing_date: 2021-06-16
-  addressee: MyString
+  customer_name: MyString
   price: 1
   proviso: MyString
   issuer_name: MyString
