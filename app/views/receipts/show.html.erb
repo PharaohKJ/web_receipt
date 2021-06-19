@@ -7,7 +7,7 @@
 <div class="mt-5 text-center">
   <h1>領収書</h1>
 </div>
-  
+
 <div class="row align-items-end">
   <div class="col-8 align-bottom text-end align-items-end">
     <h6>No</h6>
@@ -22,7 +22,7 @@
     <h6>請求日</h6>
   </div>
   <div class="col-3 text-center border-bottom border-dark">
-      <h5><%= @receipt.billing_date.strftime('%Y/%m/%d') %></h5>
+      <h5><%= @receipt.billing_date&.strftime('%Y/%m/%d') %></h5>
   </div>
 </div>
 

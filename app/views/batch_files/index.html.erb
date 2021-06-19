@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Batch Files</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @batch_files.each do |batch_file| %>
+      <tr>
+        <td><%= batch_file.name %></td>
+        <td><%= link_to 'Show', batch_file %></td>
+        <td><%= link_to 'Edit', edit_batch_file_path(batch_file) %></td>
+        <td><%= link_to 'Destroy', batch_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Batch File', new_batch_file_path %>
