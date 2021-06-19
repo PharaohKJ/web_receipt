@@ -19,7 +19,7 @@
   <tbody>
     <% @receipts.each do |receipt| %>
       <tr>
-        <td><%= receipt.no %></td>
+        <td><%= receipt.no %><br><%= link_to receipt.uuid, download_path(uuid: receipt.uuid) %></td>
         <td><%= receipt.billing_date %></td>
         <td><%= receipt.customer_name %></td>
         <td><%= receipt.price %></td>

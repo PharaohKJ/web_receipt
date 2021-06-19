@@ -60,7 +60,9 @@
   </div>
 </div>
 
-<div class="d-print-none text-center mt-5">
-  <%= link_to 'Edit', edit_receipt_path(@receipt) %> |
-  <%= link_to 'Back', receipts_path %>
-</div>
+<% if controller.controller_name != 'download' %>
+  <div class="d-print-none text-center mt-5">
+    <%= link_to 'Edit', edit_receipt_path(@receipt) %> |
+    <%= link_to 'Back', receipts_path %>
+  </div>
+<% end %>
