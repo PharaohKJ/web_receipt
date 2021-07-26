@@ -12,38 +12,38 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :no %>
-    <%= form.text_field :no %>
+    <%= form.label :no, '番号' %>
+    <%= form.text_field :no, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :billing_date %>
-    <%= form.date_select :billing_date ,use_month_numbers: true%>
+    <%= form.label :billing_date, '支払日' %>
+    <%= form.date_select :billing_date ,use_month_numbers: true, class: 'form-control'%>
   </div>
 
   <div class="field">
-    <%= form.label :customer_name %>
-    <%= form.text_field :customer_name %>
+    <%= form.label :customer_name, '顧客名(支払った人)' %>
+    <%= form.text_field :customer_name, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= form.label :price, '領収金額' %>
+    <%= form.number_field :price, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :proviso %>
-    <%= form.text_area :proviso %>
+    <%= form.label :proviso, '但し書き' %>
+    <%= form.text_area :proviso, class: 'form-control', rows: 3 %>
   </div>
 
   <div class="field">
-    <%= form.label :issuer_name %>
-    <%= form.text_field :issuer_name %>
+    <%= form.label :issuer_name, '発行者名(受け取った人)' %>
+    <%= form.text_field :issuer_name, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :issuer_address %>
-    <%= form.text_area :issuer_address %>
+    <%= form.label :issuer_address, '発行者住所(郵便番号 改行 住所 がオススメ)' %>
+    <%= form.text_area :issuer_address, class: 'form-control', rows: 3 %>
   </div>
 
   <div class="actions">
