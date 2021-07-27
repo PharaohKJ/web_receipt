@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  'no': MyString
+  billing_date: 2021-06-16
+  customer_name: MyString
+  price: 1
+  proviso: MyString
+  issuer_name: MyString
+  issuer_address: MyString
+
+two:
+  'no': MyString
+  billing_date: 2021-06-16
+  customer_name: MyString
+  price: 1
+  proviso: MyString
+  issuer_name: MyString
+  issuer_address: MyString

@@ -1,0 +1,52 @@
+<%= form_with(model: receipt, local: true) do |form| %>
+  <% if receipt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
+
+      <ul>
+        <% receipt.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :no, '番号' %>
+    <%= form.text_field :no, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :billing_date, '支払日' %>
+    <%= form.date_select :billing_date ,use_month_numbers: true, class: 'form-control'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :customer_name, '顧客名(支払った人)' %>
+    <%= form.text_field :customer_name, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price, '領収金額' %>
+    <%= form.number_field :price, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proviso, '但し書き' %>
+    <%= form.text_area :proviso, class: 'form-control', rows: 3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :issuer_name, '発行者名(受け取った人)' %>
+    <%= form.text_field :issuer_name, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :issuer_address, '発行者住所(郵便番号 改行 住所 がオススメ)' %>
+    <%= form.text_area :issuer_address, class: 'form-control', rows: 3 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

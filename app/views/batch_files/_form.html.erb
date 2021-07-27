@@ -1,0 +1,27 @@
+<%= form_with(model: batch_file) do |form| %>
+  <% if batch_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(batch_file.errors.count, "error") %> prohibited this batch_file from being saved:</h2>
+
+      <ul>
+        <% batch_file.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :file %>
+    <%= form.file_field :file %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

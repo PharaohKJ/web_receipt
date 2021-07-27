@@ -1,0 +1,68 @@
+<div class="d-print-none text-center mb-5">
+  <a href="javascript:window.print();">印刷の実行</a>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+<div class="mt-5 text-center">
+  <h1>領収書</h1>
+</div>
+
+<div class="row align-items-end">
+  <div class="col-8 align-bottom text-end align-items-end">
+    <h6>No</h6>
+  </div>
+  <div class="col-3 text-center border-bottom border-dark">
+      <h5><%= @receipt.no %></h5>
+  </div>
+</div>
+
+<div class="mt-3 row align-items-end">
+  <div class="col-8 align-bottom text-end align-items-end">
+    <h6>請求日</h6>
+  </div>
+  <div class="col-3 text-center border-bottom border-dark">
+      <h5><%= @receipt.billing_date&.strftime('%Y/%m/%d') %></h5>
+  </div>
+</div>
+
+<div class="mt-3 row align-items-end">
+  <div class="col-5 text-end">
+    <h2><%= @receipt.customer_name %></h2>
+  </div>
+  <div class="col-1 ms-5">
+    <h4>様</h4>
+  </div>
+</div>
+
+<div class="mt-5 col-12 row">
+  <div class="col-2">
+  </div>
+  <div class="pt-4 pb-4 col-8 border-top border-bottom border-dark text-center">
+    <h1>¥<%= @receipt.price.to_i.to_s(:delimited) %>-</h1>
+  </div>
+</div>
+
+<div class="mt-2 col-12 row">
+  <div class="col-3 text-end">
+    <h4>但し</h4>
+  </div>
+  <div class="col">
+    <h4><%= raw(nl2br(@receipt.proviso)) %></h4>
+  </div>
+</div>
+<div class="mt-1 col-12 row">
+  <div class="col-6">
+  </div>
+  <div class="col">
+    <h2><%= @receipt.issuer_name %></h2>
+    <h5><%= raw(nl2br(@receipt.issuer_address)) %></h5>
+  </div>
+</div>
+
+<% if controller.controller_name != 'download' %>
+  <div class="d-print-none text-center mt-5">
+    <%= link_to 'Edit', edit_receipt_path(@receipt) %> |
+    <%= link_to 'Back', receipts_path %>
+  </div>
+<% end %>
